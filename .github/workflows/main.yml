@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        name: Checkout 
+        name: Checkout
         uses: actions/checkout@v2
       -
         name: Login to Docker Hub
@@ -56,5 +56,3 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-
